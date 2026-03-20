@@ -104,7 +104,7 @@ async def contact_received(event: MessageCreated, amo_api: AmoCRMWrapper, fields
                                       max_id=max_id,
                                       fields_id=fields_id.get('contacts_fields_id'))
 
-        await event.message.edit(text=f'Вы успешно авторизовались в чат боте HiTE PRO!\n\n'
+        await event.message.answer(text=f'Вы успешно авторизовались в чат боте HiTE PRO!\n\n'
                                   f'Можете посмотреть информацию из Вашего профиля и воспользоваться '
                                   f'магазином HiTE PRO👇',
                                    attachments=[await authorized_client(start_menu)])
